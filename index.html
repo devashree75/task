@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index.html</title>
+    <link rel="stylesheet" href="style.css"
+</head>
+<body>
+     <div class="header">
+        <nav>
+            <h1>form details</h1>
+        <ul>
+            <li>Home |</li>
+            <li>name |</li>
+            <li>registerno |</li>
+            <li>department </li>
+        </ul>
+        </nav>
+    </div>
+    <form id="form">
+        <label for="Name">Name:</label>
+        <input type="text" id="name" name="name">
+        <br>
+        <label for="reg no">reg no:</label>
+        <input type="number" id="regno" name="regno">
+        <br>
+        <label for="department">department:</label>
+        <input type="text" id="department" name="department">
+        <br>
+        <input type="submit" value="submit">
+    </form>    
+     <div id="result"></div>
+        <script>
+              
+             document.getElementById('form').addEventListener('submit',function(event){event.preventDefault();
+                   const name=document.getElementById('name').value
+                   const regno=document.getElementById('regno').value
+                   const department=document.getElementById('department').value
+                   const result=document.getElementById('result');
+                   result.innerHTML=`
+                
+                      <p>name:${name}</p>
+                      <p>regno:${regno}</p>
+                      <p>department:${department}</p>`
+                   document.getElementById('form').reset()
+              })
+
+        </script>
+        
+</body>
+</html>

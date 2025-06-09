@@ -1,0 +1,16 @@
+.header{
+            background-color:gray;
+            color: white;
+            padding:30px;
+            margin-bottom: 10px;
+        }
+        li,h1,ul{
+            display:inline;
+        }
+        ul{
+            color: brown;
+            margin-left: 70%;
+        }
+        li:hover{
+            color:cornsilk;
+        }
